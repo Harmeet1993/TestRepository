@@ -1,0 +1,33 @@
+<apex:page controller="C1">
+
+<apex:form >
+
+This is the Session Id - {!$Api.session_Id} 
+
+<apex:pageBlock title="Account Information">
+
+<apex:pageBlockSection title="Show Prospect">
+    <apex:pageBlockTable value="{!prospect}" var="a">
+  
+        <apex:column value="{!a.name}"/>
+        <apex:column value="{!a.type}"/>
+        <apex:column value="{!a.industry}"/>
+        
+        
+                     
+
+</apex:pageBlockTable>
+
+    <apex:pageBlockTable value="{!Other}" var="a">
+
+       <apex:column value="{!a.name}"/>
+        <apex:column value="{!a.type}"/>
+        <apex:column value="{!a.industry}"/>
+
+
+</apex:pageBlockTable>
+
+</apex:pageBlockSection> 
+</apex:pageBlock>
+</apex:form>
+</apex:page>

@@ -1,0 +1,12 @@
+<aura:component >
+
+    <aura:registerEvent name="compevent" type="c:Event1" />
+
+    <h1>Lightning Event example </h1>
+
+<p>
+    <lightning:button label="Click Here" onclick="{!c.doInit}" />
+
+ </p>
+	
+</aura:component>

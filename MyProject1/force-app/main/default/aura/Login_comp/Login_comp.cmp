@@ -1,0 +1,11 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" 
+controller="Loginclass">
+
+    <aura:attribute name="num1" type="string"/>
+    <aura:attribute name="num2" type="string"/>
+
+    <lightning:input label="Enter name" value="{!v.num1}"/>
+    <lightning:input label="Enter password" value="{!v.num2}"/>
+    <lightning:button label="click" onclick="{!c.handleclick}" />
+	
+</aura:component>

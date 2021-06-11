@@ -1,0 +1,6 @@
+<aura:component >
+
+    <aura:registerEvent name="AccountEvent" type="c:SearchEvent1" />
+    <lightning:input name="Search" type="search" onchange="{!c.doSearch}" aura:id="searchInput" />
+	
+</aura:component>

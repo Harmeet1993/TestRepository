@@ -1,0 +1,13 @@
+<aura:component >
+
+    <aura:attribute name="recordlist" type="object" />
+    <div>
+  
+        <aura:iteration items="{!v.recordlist}" var="con" >
+        {!con.Name} {!con.Phone}
+        {!con.Email} 
+
+        </aura:iteration>
+  </div>
+	
+</aura:component>

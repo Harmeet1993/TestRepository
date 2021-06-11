@@ -1,0 +1,11 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+
+    <aura:attribute name="Contactlist" type="contact" />
+    <aura:handler name="compevent" event="c:Contactevent" action="{!doHandle}" />
+
+    <c:CreateContactComponent/>
+    <c:ContactReview ContactReords="{!v.Contactlist}" />
+
+
+	
+</aura:component>

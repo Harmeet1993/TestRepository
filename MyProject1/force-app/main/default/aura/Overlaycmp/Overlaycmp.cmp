@@ -1,0 +1,9 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	
+    <lightning:overlayLibrary aura:id="overlayLib" />
+    <lightning:button label="Create Modal" onclick="{!c.createModal}"/>
+
+    <lightning:navigation aura:id="navigation"/>
+    <lightning:button label="Navigate" onclick="{!c.Navigate}" /> 
+ 
+</aura:component>

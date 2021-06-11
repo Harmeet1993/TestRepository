@@ -1,0 +1,27 @@
+<apex:page controller="AccountVfClass" >
+
+  <apex:form >
+   <apex:pageBlock >
+    <apex:pageBlockSection title="Old Accounts">
+        <apex:commandButton value="Get Account" action="{!getaccount}"/> <br/> 
+      <apex:pageBlockTable value="{!acclist}" var="acc">
+       <apex:column value="{!acc.Name}"/>
+       <apex:column value="{!acc.Type}"/>
+       <apex:column value="{!acc.Fax}"/>
+     </apex:pageBlockTable>
+   </apex:pageBlockSection>
+ 
+   <apex:pageblock >
+   <apex:pageBlockSection title="New Accounts">
+       <apex:commandButton value="Get Account" action="{!getnewaccount}"/> <br/> 
+      <apex:pageBlockTable value="{!accnewlist}" var="acc">
+       <apex:column value="{!acc.Name}"/>
+       <apex:column value="{!acc.Type}"/>
+       <apex:column value="{!acc.Fax}"/>
+     </apex:pageBlockTable>
+   </apex:pageBlockSection>
+   </apex:pageblock>
+
+    </apex:pageBlock>
+  </apex:form>
+</apex:page>

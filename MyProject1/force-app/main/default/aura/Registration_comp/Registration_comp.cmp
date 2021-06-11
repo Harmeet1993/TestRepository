@@ -1,0 +1,20 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,force:lightningQuickAction"  
+access="global" controller="RegistrationClass" >
+   
+  <aura:attribute name="Aspirant" type="object" default="{'Name': '', 'Email__c':'', 
+                                                             'Password__c':''}"/>
+ 
+
+ 
+   <div class="slds-p-left_x-small">
+   
+     <lightning:input label="Enter Name" type="text" value="{!v.Aspirant.Name}" />
+    <lightning:input label="Enter Email" type="text" value="{!v.Aspirant.Email__c}"/>
+    <lightning:input label="Enter Password" type="password" value="{!v.Aspirant.Password__c}"/>
+    
+    <div class="slds-p-top_x-large">
+    <lightning:button label="Save Details" variant="brand" onclick="{!c.handleSave}"/> 
+   </div>
+  </div>
+	
+</aura:component>

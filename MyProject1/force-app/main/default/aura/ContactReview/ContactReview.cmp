@@ -1,0 +1,23 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+
+    <aura:attribute name="ContactReords" type="contact" />
+
+    <div>
+    <aura:iteration items="{!v.ContactReords}" var="con" >	
+    <div class="slds-grid slds-wrap">
+
+  <div class="slds-col slds-size_1-of-4">
+      {!con.FirstName}
+  </div>
+
+  <div class="slds-col slds-size_1-of-4">
+   {!con.LastName}
+  </div>
+
+   <div class="slds-col slds-size_1-of-4">
+   {!con.Email}
+  </div>
+        </div>
+        </aura:iteration>
+</div>
+</aura:component>

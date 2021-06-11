@@ -1,0 +1,9 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+
+    <lightning:button label="Create contact" variant="brand" onclick="{!c.createContact}" />
+    <lightning:recordForm 
+     recordId="{!v.recordId}"
+     objectApiName="Contact"
+     mode="view"/> 	
+ 
+</aura:component>

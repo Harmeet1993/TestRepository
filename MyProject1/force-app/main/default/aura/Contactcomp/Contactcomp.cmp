@@ -1,0 +1,19 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,force:hassObjectName" access="global" controller="contactcontrlr">
+
+    <aura:attribute name="contact" type="contact[]" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    
+    <aura:iteration items="{!v.contact}" var="con">
+ 
+    <lightning:card footer="{!con.Email}" title="{!con.LastName}">
+        <p class="slds-p-horizontal_small"/>
+        <aura:set attribute="actions">
+        <lightning:button label="View Details" onclick="{!c.dosearch}" name="{!con.id}" />
+        </aura:set>
+        {!con.FirstName}  &nbsp; &nbsp; {!con.LastName} <br/>
+        {!con.Phone} <br/>  &nbsp; &nbsp; {!con.Email} 
+       
+    </lightning:card> 
+</aura:iteration>
+</aura:component>

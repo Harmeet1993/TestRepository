@@ -1,0 +1,19 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+
+    <aura:attribute name="newContact" type="Object"/>
+    <aura:attribute name="simpleNewContact" type="Object"/>
+    <aura:attribute name="newContactError" type="String"/>
+   
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+ 
+    <force:recordData aura:id="contactRecordCreator" 
+                      fields="FirstName,LastName,Title"
+                      targetRecord="{!v.newContact}"
+                      targetFields="{!v.simpleNewContact}"
+                      targetError="{!v.newContactError}" />
+
+      <lightning:button label="Save Contact" variant="brand" onclick="{!c.handleSaveContact}"/>
+       <lightning:button label="Delete Record" variant="destructive" onclick="{!c.handleDeleteRecord}"/>
+                      
+    
+</aura:component>

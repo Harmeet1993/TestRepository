@@ -1,0 +1,9 @@
+<aura:component >
+
+    <aura:attribute name="message" type="string" />
+
+    <aura:handler event="c:Event1" action="{!c.handleappevent}" />
+
+     {!v.message} 
+	
+</aura:component>

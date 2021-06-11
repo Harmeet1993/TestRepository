@@ -1,0 +1,13 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	
+    <aura:attribute name="contactrecord" type="Contact" default="{'sobjectType' : 'Contact', 'Name' : '', 'Email': ''}" />
+
+    <lightning:input label="Enter Name" value="{!v.contactrecord.Name}"/>
+    <lightning:input label="Enter Email" value="{!v.contactrecord.Email}"/>
+
+    <br/>
+
+  <lightning:button label="Save" variant="brand" onclick="{!c.doSave}"/>
+    <aura:registerEvent name="compevent" type="c:Contactevent" />
+
+</aura:component>

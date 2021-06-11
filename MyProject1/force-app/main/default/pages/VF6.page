@@ -1,0 +1,26 @@
+<apex:page controller="C8">
+    
+    <apex:form > 
+     <apex:pageBlock title="Account Type Details">
+     <apex:pageBlockSection title="Acccount Prospect">
+        <apex:pageBlockTable value="{!prospect}" var="ac">
+        <apex:column value="{!ac.name}"/>
+         <apex:column value="{!ac.Id}"/>
+         <apex:column value="{!ac.phone}"/>
+
+</apex:pageBlockTable>
+</apex:pageBlockSection>
+
+     <apex:pageBlockSection title="Account Customer">
+     <apex:pageBlockTable value="{!customer}" var="ac">
+
+      <apex:column value="{!ac.name}"/>
+         <apex:column value="{!ac.Id}"/>
+         <apex:column value="{!ac.phone}"/>
+
+</apex:pageBlockTable>
+</apex:pageBlockSection>
+</apex:pageBlock>
+
+</apex:form>
+</apex:page>

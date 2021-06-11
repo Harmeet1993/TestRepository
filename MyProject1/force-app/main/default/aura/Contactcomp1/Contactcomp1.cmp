@@ -1,0 +1,21 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" controller="Contactcompclass">
+
+    <aura:attribute name="Contactlist" type="Contact[]" />
+    <aura:attribute name="con" type="string" />
+
+    <div class="slds-p-around_xxx-small">
+    <lightning:input label="Enter Name" type="search" onchange="{!c.dosearch}" value="{!v.con}"/>	
+    </div>
+
+   <aura:iteration items="{!v.Contactlist}" var="cont">
+
+    <lightning:card footer="{!cont.Email}" title="{!cont.FirstName}">
+
+{!cont.FirstName} &nbsp; &nbsp; {!cont.LastName}
+{!cont.Phone} &nbsp; &nbsp; {!cont.Fax}
+
+</lightning:card> 
+       
+</aura:iteration>
+ 
+</aura:component>

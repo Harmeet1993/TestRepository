@@ -1,0 +1,15 @@
+<aura:component controller="Datatablecls" implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+
+    <aura:attribute name="data" type="object" />
+    <aura:attribute name="columns" type="object" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+   <div> 
+   <lightning:datatable aura:id="accountTable" 
+                        keyField="id"
+                        data="{!v.data}"
+                        columns="{!v.columns}" />
+
+</div> 
+	
+</aura:component>

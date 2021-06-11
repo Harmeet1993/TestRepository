@@ -1,0 +1,15 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+
+    <aura:handler name="compevent" event="c:Contactevent" action="{!c.doHandle}" />
+    <aura:attribute name="contacts" type="contact" />
+	  <c:createcontactcmp/>
+     
+    <aura:iteration items="{!v.contacts}" var="con">
+    
+    {!con.Name} <br/>
+    {!con.Email}
+
+   </aura:iteration>
+ 
+   
+</aura:component>

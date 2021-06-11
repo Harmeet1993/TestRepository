@@ -1,0 +1,11 @@
+<aura:component controller="Searchcontactcontrolller" implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	
+    <aura:attribute name="contact" type="Contact[]" />
+    <aura:attribute name="searchkey" type="string"/>
+
+    <lightning:input name="Search" value="{!v.searchkey}" label="Search" />
+    <lightning:button variant="Brand" label="View Details" onclick="{!c.searchData}" />
+
+
+
+</aura:component>

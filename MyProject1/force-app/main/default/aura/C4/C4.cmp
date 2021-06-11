@@ -1,0 +1,24 @@
+<aura:component  controller="LC1">
+
+    <aura:attribute name="contacts" type="contact[]"/>
+
+    <aura:handler name="init" value="{!this}" action = "{!c.doInit}"/>
+
+    <ul class="list-group"/>
+    <aura:iteration items="{!V.contacts}" var="contact">
+
+    <li class = "list-group-item"> 
+
+    <a href="{!'#contact/' +contact.id}">
+
+
+ <p> {!contact.Name}</p>	
+<p> {!contact.phone}</p>
+ 
+</a>
+   
+ </li>
+
+</aura:iteration>
+   
+</aura:component>

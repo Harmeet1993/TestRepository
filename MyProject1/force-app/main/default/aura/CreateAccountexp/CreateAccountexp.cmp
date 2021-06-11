@@ -1,0 +1,9 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+
+    <aura:attribute name="FirstName" type="string" />
+    <aura:handler name="cmpevent" event="c:AccEvent" action="{!c.doHandle}" />
+
+    <c:CreateAccount />
+    <c:CreateAccountchild record= "{!v.FirstName}"/> 
+	
+</aura:component>

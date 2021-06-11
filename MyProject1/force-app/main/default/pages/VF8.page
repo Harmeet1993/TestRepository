@@ -1,0 +1,25 @@
+<apex:page controller="C7" >
+
+<apex:form >
+ 
+  <apex:pageblock title="Account Information">
+   <apex:pageBlockTable value="{!acts}" var="acc">
+
+  
+
+   
+
+
+
+
+</apex:pageBlockTable>
+
+
+
+
+</apex:pageblock>
+
+
+</apex:form>
+
+</apex:page>

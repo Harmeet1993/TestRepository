@@ -1,0 +1,13 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+
+
+    <div class="slds-p-around_x-small">
+ 
+ <lightning:input label="Enter Name" type="text" value="{!v.searchparam}" onchange="{!c.dohandle}"/>
+
+   </div>
+    <aura:attribute name="searchparam" type="string" />    
+   
+    <aura:registerEvent name="accevent" type="c:Accountevent" />
+	
+</aura:component>

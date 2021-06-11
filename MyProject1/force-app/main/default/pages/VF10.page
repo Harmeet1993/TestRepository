@@ -1,0 +1,4 @@
+<apex:page >
+
+<apex:outputLink value="https://www.youtube.com/"> "Click here for You tube" </apex:outputLink>
+</apex:page>

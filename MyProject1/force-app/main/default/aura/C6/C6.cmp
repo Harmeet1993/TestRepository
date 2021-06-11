@@ -1,0 +1,19 @@
+<aura:component controller="LC2">
+
+    <aura:attribute name="account" type="account[]"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <ul class="list-group"/>
+
+    <aura:iteration items="{!V.account}" var= "account" />
+
+    <li class="list-group-item"/>
+   
+
+<a href="{!'#account/' }">
+<p> {!account.Name}</p>
+<p> {!account.phone}</p>
+
+    </a>
+</aura:component>

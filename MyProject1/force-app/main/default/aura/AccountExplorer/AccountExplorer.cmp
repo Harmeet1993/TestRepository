@@ -1,0 +1,19 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" controller="SearchAccountclass" >
+	
+    <aura:handler name="AccountEvent" event="c:SearchEvent1" action="{!c.handleappevent}" />
+    <aura:attribute name="accountlist" type="object" />
+
+    <c:AccountSearch/>
+
+<aura:iteration items="{!v.accountlist}" var="acc" >
+ 
+   <lightning:card title="{!acc.Name}"  footer="{!acc.Fax}">
+
+    {!acc.Name} <br/>
+    {!acc.Industry} <br/>
+    
+
+</lightning:card>
+</aura:iteration>
+   
+</aura:component>

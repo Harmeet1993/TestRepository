@@ -1,0 +1,22 @@
+<apex:page controller="C2" >
+
+<apex:form >  
+   <apex:pageBlock title="Account Information">
+
+   <apex:pageBlockSection > 
+
+   <apex:commandButton value="Show other" action="{!other}"/>
+
+    <apex:commandButton value="show customer" action="{!customer}"/>
+
+   <apex:pageBlockTable value="{!acts}" var="a" >
+   
+       <apex:column value="{!a.name}"/>
+       <apex:column value="{!a.type}"/>
+       <apex:column value="{!a.industry}"/>
+
+</apex:pageBlockTable>
+</apex:pageBlockSection>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

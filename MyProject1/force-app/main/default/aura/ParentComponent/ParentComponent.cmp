@@ -1,0 +1,6 @@
+<aura:component >
+	
+  <c:Compevent/>
+  <c:ParentCompevent/>
+
+</aura:component>

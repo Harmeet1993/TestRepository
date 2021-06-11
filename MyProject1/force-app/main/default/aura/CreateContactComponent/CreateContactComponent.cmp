@@ -1,0 +1,35 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+
+    <aura:registerEvent name="compevent" type="c:Contactevent" />
+   <aura:attribute name="ContactRecord" type="Contact" default="{
+                                                                  'sobjectType': 'Contact',
+                                                                   'FirstName' : '', 
+                                                                   'LastName' : '',
+                                                                   'Phone' : '',
+                                                                   'Email' : '' } "/>
+   <div class="slds-p-around_x-small">
+  <div class="slds-grid slds-gutters">
+
+  <div class="slds-col slds-size_1-of-2">
+      <lightning:input label="FirstName" value="{!v.ContactRecord.FirstName}" />
+  </div>
+
+  <div class="slds-col slds-size_1-of-2">
+    <lightning:input label="LastName" value="{!v.ContactRecord.LastName}" />
+  </div>
+       </div>
+
+   <div class="slds-grid slds-gutters">
+  <div class="slds-col slds-size_1-of-2">
+     <lightning:input label="Phone" value="{!v.ContactRecord.Phone}" />
+  </div>
+  
+  <div class="slds-col slds-size_1-of-2">
+     <lightning:input label="Email" value="{!v.ContactRecord.Email}" />
+      </div>
+       </div>
+ 
+       <lightning:button label="Save" variant="brand" onclick="{!c.doSave}"/>
+   </div>
+                                                                
+ </aura:component>

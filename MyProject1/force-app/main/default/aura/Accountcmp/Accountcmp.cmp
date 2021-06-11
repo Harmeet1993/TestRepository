@@ -1,0 +1,16 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" 
+access="global" controller="Accountcmpclass">
+	
+    <aura:attribute name="AccName" type="string" />   
+    <aura:attribute name="Accountlist" type="Account[]" /> 
+
+<lightning:input label="Enter Account Name" type="text" value="{!v.AccName}" onchange="{!c.doSearch}" />
+
+    <aura:iteration items="{!v.Accountlist}" var="acc" >
+
+  {!acc.Name} &nbsp; &nbsp;
+  {!acc.Id}
+
+</aura:iteration>
+
+   </aura:component>

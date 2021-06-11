@@ -1,0 +1,25 @@
+<template>
+
+<div class="slds-m-around_medium">
+     
+    <lightning-input label="Search" type="search" value={searchvalue} onchange={handlechange}> </lightning-input>
+
+    <template if:true={contacts.data}>
+
+<lightning-card title="Contact Searching" icon-name="custom:custom11">
+
+<template for:each={contacts.data} for:item="con">
+
+    <li key={con.Id}>
+
+{con.FirstName} <br> {con.LastName} <br>
+
+{con.Email}
+
+</li>
+</template>
+</lightning-card>
+</template>
+</div>
+    
+</template>

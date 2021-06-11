@@ -1,0 +1,10 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	
+    <aura:attribute name="fname" type="string" />
+    
+    <lightning:input label="Enter Name" name="Enter Name" value="{!v.fname}"/>
+
+    <aura:registerEvent name="cmpevent" type="c:AccEvent" />
+    <lightning:button label="Save" variant="brand" onclick="{!c.doSave}"/>
+
+</aura:component>

@@ -1,0 +1,43 @@
+<aura:component controller="SearchAccountcls" implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+
+    <aura:attribute name="searchkey" type="string" />
+    <aura:attribute name="Accountlist" type="list" />	
+  
+  <div class="slds-p-horizontal_x-large">
+    <lightning:input name="SearchAccount" value="{!v.searchkey}" onchange="{!c.doSearch}" />
+    </div>
+<div class="slds-p-horizontal_x-large">
+    <br/> <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+            <thead>
+                <tr class="slds-line-height_reset">
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title="Name">Name</div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title="AnnualRevenue">AnnualRevenue</div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title="Industry">Industry</div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+
+    <aura:iteration items="{!v.Accountlist}" var="a">
+                    <tr>
+                        <td data-label="Name">
+                            <div class="slds-truncate" title="">{!a.Name}</div>
+                        </td>
+                        <td data-label="Industry">
+                            <div class="slds-truncate" title="">{!a.Industry}</div>
+                        </td>
+                        <td data-label="AnnualRevenue">
+                            <div class="slds-truncate" title="">{!a.AnnualRevenue}</div>
+                        </td>
+                    </tr>
+                </aura:iteration>
+     </tbody>
+        </table>
+    </div>
+   
+</aura:component>

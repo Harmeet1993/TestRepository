@@ -1,0 +1,21 @@
+<template>
+
+    <lightning-card title="Display Contact">
+
+
+        <template for:each={contacts} for:item="con">
+        <li key={con.Id}>
+        {con.FirstName} <br>
+        {con.Email} <br>
+        
+        </li>
+
+
+        </template>
+
+
+
+    </lightning-card>
+
+
+</template>

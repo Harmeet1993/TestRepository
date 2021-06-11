@@ -1,0 +1,13 @@
+<aura:component controller="Searchcontactcls">
+
+    <aura:handler name="ContactEvent" event="c:SearchEvent" action="{!c.handleCompEvent}" />
+    <aura:attribute name="contactlist" type="object" />
+
+
+       <div>
+       <c:ContactSearch/>
+      </div>
+
+    <c:ContactListComponent recordlist= "{!v.contactlist}" />
+	
+</aura:component>

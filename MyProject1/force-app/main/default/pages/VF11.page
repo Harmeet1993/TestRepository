@@ -1,0 +1,35 @@
+<apex:page controller="C9" >
+
+<apex:form >
+<apex:pageblock title="Account Info">
+<apex:pageBlockSection >
+
+<apex:pageBlockSectionItem >
+    <apex:outputLabel value="First number"/>
+    <apex:inputText value="{!firstnumber}"/>
+
+</apex:pageBlockSectionItem>
+
+
+<apex:pageBlockSectionItem >
+    <apex:outputLabel value="Second number"/>
+    <apex:inputText value="{!secondnumber}"/>
+
+</apex:pageBlockSectionItem>
+
+<apex:pageBlockSectionItem >
+    <apex:outputLabel value="Result"/>
+    <apex:inputText value="{!result}"/>
+
+</apex:pageBlockSectionItem>
+
+</apex:pageBlockSection>
+
+<apex:commandButton value="Addition" action="{!add}"/>
+<apex:commandButton value="Subtraction" action="{!sub}"/>
+
+
+
+</apex:pageblock>
+</apex:form>
+</apex:page>

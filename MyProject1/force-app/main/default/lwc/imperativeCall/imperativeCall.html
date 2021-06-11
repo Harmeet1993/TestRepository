@@ -1,0 +1,33 @@
+<template>
+    
+<lightning-button label="Get Values" variant="brand" onclick={handleclick}> </lightning-button> <br>
+
+<lightning-card title="Contacts Info" icon-name="custom:custom11">
+
+    <div class="slds-m-around_medium">
+
+<template if:true={contacts}>
+
+<template for:each={contacts} for:item="con">
+<li key={con.Id}> 
+
+{con.FirstName} 
+
+{con.LastName} 
+
+{con.Email}
+</li>
+</template>
+</template>
+
+<template if:true={error}>
+
+    Error is {error}
+
+</template>
+
+</div>
+
+</lightning-card>
+
+</template>

@@ -1,0 +1,15 @@
+<aura:component >
+
+        <aura:method name="samplemethod" action="{!c.doAction}" >
+        <aura:attribute name="param1" type="string"/>
+        <aura:attribute name="param2" type="string" /> 
+
+    </aura:method>
+
+    <aura:attribute name="value1" type="string" />
+    <aura:attribute name="value2" type="string" />
+
+    {!v.value1}
+    {!v.value2}
+	
+</aura:component>

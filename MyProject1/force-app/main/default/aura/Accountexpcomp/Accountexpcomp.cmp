@@ -1,0 +1,16 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" controller="AccountClass" >
+
+    <aura:attribute name="Account" type="Account[]" />
+    <aura:handler name="compevent" event="c:Accountevent" action="{!c.handlecompevent}" />
+
+    <aura:iteration items="{!v.Account}" var="acc" >
+
+        {!acc.Name} <br/>
+        {!acc.Phone} <br/>
+        {!acc.Industry} 
+
+</aura:iteration>
+
+    <c:Accountcomp />
+	
+</aura:component>

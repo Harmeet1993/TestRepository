@@ -1,0 +1,9 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+
+   
+    <c:Cmp_AuraMethod_child  aura:id="childcmp"/>
+   
+    <lightning:button label="Calculate" variant="brand" onclick="{!c.Calculate}"/>
+
+	
+</aura:component>
