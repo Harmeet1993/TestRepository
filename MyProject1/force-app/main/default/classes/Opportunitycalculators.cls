@@ -1,5 +1,7 @@
 public class Opportunitycalculators {
 
+// Adding comment to the the Opportunity Class !!
+
     public static void calculateopportunity(list<opportunity> newlist, list<opportunity> oldlist){
      
      set<id> accid = new set<id>();
